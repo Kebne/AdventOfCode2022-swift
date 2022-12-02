@@ -6,22 +6,22 @@ final class TwoTests: XCTestCase {
     let sut = Two()
 
     func testFirstExample() throws {
-        let points = sut.points(given: testInput)
+        let points = sut.runFirst(input: testInput)
         XCTAssertEqual(points, 15)
     }
 
     func testFirst() throws {
-        let points = sut.points(given: input)
+        let points = sut.runFirst(input: input)
         XCTAssertEqual(points, 13682)
     }
 
     func testSecondExample() throws {
-        let points = sut.points2(given: testInput)
+        let points = sut.runSecond(input: testInput)
         XCTAssertEqual(points, 12)
     }
 
     func testSecond() throws {
-        let points = sut.points2(given: input)
+        let points = sut.runSecond(input: input)
         XCTAssertEqual(points, 12881)
     }
 
