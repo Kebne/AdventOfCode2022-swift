@@ -6,6 +6,14 @@ struct Two {
         case draw = 3
         case loss = 0
 
+        var translated: Int {
+            switch self {
+            case .win: return 0
+            case .draw: return 1
+            case .loss: return 2
+            }
+        }
+
         static func from(_ str: String) -> Self {
             switch str {
             case "Y": return .draw
@@ -43,6 +51,9 @@ struct Two {
         }
 
         func selection(toAchieve outcome: Outcome) -> Selection {
+
+            
+
             switch (outcome, self) {
             case (.win, .rock): return .paper
             case (.loss, .rock): return .scissors
