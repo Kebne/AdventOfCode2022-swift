@@ -22,4 +22,13 @@ extension Array {
             Array(self[$0 ..< Swift.min($0 + size, count)])
         }
     }
+
+    func padded(to length: Int, with element: Element) -> [Element]? {
+        let difference = length - count
+        guard difference >= 0 else {
+            // return nil if count is larger than our target length
+            return nil
+        }
+        return self + Array(repeating: element, count: difference)
+    }
 }
