@@ -107,7 +107,6 @@ struct Fourteen {
         let sandMaxY = sand.max { $0.y < $1.y }?.y ?? posMaxY
         let sandMinX = sand.min { $0.x < $1.x }?.x ?? posMinX
         let sandMaxX = sand.max { $0.x < $1.x }?.x ?? posMaxX
-
         let minX = min(posMinX, sandMinX)
         let maxX = max(posMaxX, sandMaxX)
         let minY = min(posMinY, sandMinY)
