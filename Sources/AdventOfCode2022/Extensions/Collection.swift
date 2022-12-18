@@ -42,6 +42,7 @@ extension Collection where Self.Iterator.Element: RandomAccessCollection {
     }
 }
 
+
 extension Array {
     func split() -> ([Element], [Element]) {
         let half = count / 2
