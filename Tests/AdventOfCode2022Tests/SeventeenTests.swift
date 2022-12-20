@@ -16,7 +16,9 @@ final class SeventeenTests: XCTestCase {
         XCTAssertEqual(sut.run(with: testInput, rocks: 1000000000000), 1514285714288)
     }
 
-    func testSecond() {}
+    func testSecond() {
+        XCTAssertEqual(sut.run(with: input, rocks: 1000000000000), 1555113636385)
+    }
 }
 
 extension SeventeenTests {
